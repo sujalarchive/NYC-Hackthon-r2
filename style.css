@@ -255,6 +255,7 @@ form button {
     padding:20px;
     box-shadow:0 15px 40px rgba(0,0,0,.15);
     transition:.3s;
+    transform:translateY(-6px);
 }
 
 /* Items themes */
