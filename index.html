@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="theme-colour" content="#000000">
    <meta name="Description" content="A minimal to-do List Website">
-
-
-    <title>Document</title>
-
+   <title>To Do List</title>
+   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <link rel="stylesheet" href="style.css">
-    <body class="default-theme"></body>
-    <body class="light-theme"></body>
-</body class="dark-theme"></body>
+
+    <body class="default-theme">
+        <!--theme buttons-->
+        <button class="theme-selector" id="theme-toggle">
+            Toggle Theme     
+        </button>
+        <!--header-->
     <div id ="header">
+
         <div class="flex-container">
             <div class="default-theme theme-selector"></div>
             <div class="dark-theme theme-selector"></div>
         <div class="light-theme theme-selector"></div>
         </div>
-        <h1 id ="title">To Do list</h1>
-    </div>
 
+        <h1 id ="title">To Do list</h1>
+
+    </div>
+    <!--form-->
     <div id="form">
         <form>
-            <input class="todo-input" placeholder="Add a new task...">
+
+            <input
+            type="text"
+             class="todo-input"
+             placeholder="Add a new task...">
+
+             <button type="submit">Add Task</button>
 
         </form>
     </div>
-
+    <!--github icon -->
     <div class ="version">
-        <div class="demo version"><a href="https://github.com/sujalarchive/NYC-Hackthon-r2" class="github">
+        <div class="demo version">
+            <a href="https://github.com/sujalarchive/NYC-Hackthon-r2" class="github">
+
+                <!-- GitHub SVG Icon -->
             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 ... (truncated for brevity) ...
-                </svg></a>
-            </div>
+                </svg>
+             </a>
 
-            <div>
+            </div>
+    </div>
+                <!-- Date and Time -->
+                 <div>
                 <p><span id="datetime"></span></p>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
             </div>
+<!-- To Do List -->
+                <div id="todo-list">
 
-                <div id="to do-list">
-                    <ul class="todo-list"></ul>
-                    <!-- (Minimal Format)-->
-                     <div class="todo-list">
-                        Add items to your list:
-                        <li></li>
+                    <ul class="todo-list">
+                        <!--JavaScript will dynamically add list items here-->
+                    </ul>
+                    </div>  
+
                         <button>Delete</button>
 
                         <button>Complete</button>
 
-                     </div>
-                    </ul>
-                    <script src="script.js" type="text/javascript"></script>
+    <!-- JavaScript -->
+                    <script
+                     src="script.js" type="text/javascript"></script>
 
 </body>
 </html>
