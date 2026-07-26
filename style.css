@@ -104,6 +104,23 @@
 }
   
   /* text animation */
+  @keyframes float{
+
+0%{
+    transform:translateY(0);
+
+}
+50%{
+    transform:translateY(-8px);
+
+}
+
+100%{
+    transform:translateY(0);
+
+}
+
+}
   
   @keyframes animated-text{
     from{width: 0%;}
@@ -251,6 +268,7 @@ form button {
 }
 
 .todo {
+    animation:float 4s ease infinite;
     background:white;
     border-left:8px solid var(--lime);
     border-radius:25px;
