@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="theme color" content="#ffffff">
+   <meta name="theme-colour" content="#000000">
    <meta name="Description" content="A minimal to-do List Website">
 
 
@@ -11,18 +11,22 @@
 
 </head>
 <body>
+    <link rel="stylesheet" href="style.css">
+    <body class="default-theme"></body>
+    <body class="light-theme"></body>
+</body class="dark-theme"></body>
     <div id ="header">
         <div class="flex-container">
-            <div class="standard-theme theme-selector"></div>
+            <div class="default-theme theme-selector"></div>
             <div class="dark-theme theme-selector"></div>
         <div class="light-theme theme-selector"></div>
         </div>
-        <h1 id ="title">To Do list<div id="border"></div></h1>
+        <h1 id ="title">To Do list</h1>
     </div>
 
     <div id="form">
         <form>
-            <input Class="todo-input" placeholder="Add a new task...">
+            <input class="todo-input" placeholder="Add a new task...">
 
         </form>
     </div>
@@ -52,5 +56,6 @@
                      </div>
                     </ul>
                     <script src="script.js" type="text/javascript"></script>
+
 </body>
 </html>
