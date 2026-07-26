@@ -5,13 +5,49 @@
 
     body {
         font-family: 'Roboto', sans-serif;
-        background-color: hsl(0, 19%, 58%);
+        background-color: hsl(0, 100%, 100%);
         align-items: center;
         flex-direction: column;
         min-height: 100vh;
         padding: 0 2rem;
         padding-top: 2rem;
-        
+
         
         
     }
+
+    /*body darker theme*/
+    .default-theme {
+        background-image: radial-gradient(100% 100% at 50% 50%, hsl(0, 100%, 100%) 0%, hsl(0, 2%, 25%) 100%);
+        color:rgb(15, 95, 245);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .light-theme {
+            background-image: radial-gradient(100% 100% at 50% 50%, hsl(108, 93%, 32%) 0%, hsl(0, 47%, 44%) 100%);
+            color:rgb(15, 95, 245);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dark-theme {
+            background-image: radial-gradient(100% 100% at 50% 50%, hsl(0, 0%, 20%) 0%, hsl(0, 0%, 20%) 100%);
+            color:rgb(15, 95, 245);
+            transition: all 0.3s ease-in-out;
+        }
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;  
+    min-height:30px;
+}
+*theme buttons*/
+.theme-selector {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 1rem;
+    border: 2px solid #000000;
+}
