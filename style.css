@@ -92,6 +92,7 @@
    font-size:4rem;
    letter-spacing:5px;
    text-transform:uppercase;
+   color: var(--paper);
   }
   
   /* Animation */
@@ -277,6 +278,7 @@ form button {
     box-shadow:0 15px 40px rgba(0,0,0,.15);
     transition:.3s;
     transform:translateY(-6px);
+    color: black;
 }
 
 /* Items themes */
@@ -295,6 +297,8 @@ form button {
 .todo li{
     font-size:22px;
     font-weight:600;
+    flex: 1;
+    color: black;
 }
 
 .check-btn, .delete-btn {
