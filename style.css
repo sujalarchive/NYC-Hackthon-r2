@@ -191,6 +191,8 @@ button {
 
 button:hover {
     cursor: pointer;
+    transform:translateY(-4px);
+    scale:1.04;
 }
 
 /* Button themes */
@@ -272,25 +274,13 @@ form button {
 }
 
 .todo li{
-    padding: 7px;
-    /* word-wrap: break-word; */
-    /* flex-wrap: wrap; */
-    font-size: 20px;
-    flex: 1; /* To push the trash and the check button to the right */
-    border-radius: 30px;
-
-    /* wraps the links */
-    overflow-wrap: anywhere;
+    font-size:22px;
+    font-weight:600;
 }
 
 .check-btn, .delete-btn {
-    font-size: 19px;
-    cursor: pointer;
-    width: 2em;
-    height: 2em;
-    border-radius: 80%;
-    margin: 0 5px;
-}
+    background:var(--lime);
+    color:black;
 
 .todo-item {
     padding: 0rem 0.5rem;
@@ -356,15 +346,15 @@ form button {
     }
 
     form input {
-        border-radius: 17px;
+        border-radius: 24px;
     }
 
     form button {
-        border-radius: 15px;
+        border-radius: 24px;
         margin-top: 15px;
         width: 50%;
     }
     form > button.light-button {
-        box-shadow: 0 0 5px lightgray;
+       box-shadow:0 20px 40px rgba(0,0,0,.2);
     }
 }
