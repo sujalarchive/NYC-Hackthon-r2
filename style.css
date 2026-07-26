@@ -1,53 +1,369 @@
-* { margin: 0;
+* {
+ :root{
+--black:#111111;
+--paper:#F8F5EC;
+--purple:#8B5CF6;
+--lime:#D9FF38;
+--blue:#2563EB;
+--yellow:#FFD84D;
+--red:#FF5757;
+
+}
      padding: 0;
       box-sizing: border-box;
      }
 
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
         background-color: hsl(0, 100%, 100%);
         align-items: center;
         flex-direction: column;
         min-height: 100vh;
         padding: 0 2rem;
         padding-top: 2rem;
+        background:var(--purple);
+        background:#111111;
 
         
         
     }
 
-    /*body darker theme*/
+  /* Theme Styles */
     .default-theme {
-        background-image: radial-gradient(100% 100% at 50% 50%, hsl(0, 100%, 100%) 0%, hsl(0, 2%, 25%) 100%);
-        color:rgb(15, 95, 245);
+        background:#111111;
+        color:white;
         transition: all 0.3s ease-in-out;
     }
 
         .light-theme {
-            background-image: radial-gradient(100% 100% at 50% 50%, hsl(108, 93%, 32%) 0%, hsl(0, 47%, 44%) 100%);
-            color:rgb(15, 95, 245);
+            background:#F8F5EC;
+            color:#111111;
             transition: all 0.3s ease-in-out;
         }
 
         .dark-theme {
-            background-image: radial-gradient(100% 100% at 50% 50%, hsl(0, 0%, 20%) 0%, hsl(0, 0%, 20%) 100%);
-            color:rgb(15, 95, 245);
+            background:#8B5CF6;
+            color:white;
             transition: all 0.3s ease-in-out;
         }
-#header {
+#header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+     justify-content: space-between;
+     align-items: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;  
     min-height:30px;
+    border-radius:25px;
+    padding:flex-container;
 }
-*theme buttons*/
+/*Theme button design*/
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: right 3%;
+}
 .theme-selector {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-selector:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    margin-right: 1rem;
-    border: 2px solid #000000;
+}
+.standard-theme {
+    background:var(--purple);
+}
+
+.light-theme {
+     background:var(--lime);
+}
+
+.darker-theme {
+    background:var(--blue);
+}
+
+/* Animation */
+#title {
+   font-family:'Bebas Neue',sans-serif;
+   font-size:4rem;
+   letter-spacing:5px;
+   text-transform:uppercase;
+  }
+  
+  /* Animation */
+#title {
+    animation: animated-text 2s steps(11,end) 0.5s 1 normal both,
+        animated-cursor 750ms steps(11,end) infinite;
+  }
+
+#title.darker-title {
+    animation: animated-text 2s steps(11,end) 0.5s 1 normal both, darker-animated-cursor 750ms steps(11,end) infinite;
+}
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0%;}
+    to{width: 480px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0, 0, 0, 0.75);}
+    to{border-right-color: transparent;}
+  }
+
+  @keyframes darker-animated-cursor {
+    from{border-right-color: #01394c;}
+    to{border-right-color: transparent;}
+  }
+
+form {
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+form input {
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:20px;
+    padding:18px;
+    border-color:var(--lime);
+    transform:scale(1.02);
+}
+
+/* Input themes */
+form input.standard-input {
+    background-color: #181a1a;
+    color: rgb(247, 226, 223);
+}
+
+
+form input.light-input {
+    background-color: #AEB1B4;
+    color: #1a150e;
+}
+
+form input.light-input::placeholder {
+    color: #1a150e;
+    opacity: 0.7;
+}
+
+form input.darker-input {
+    background-color: #01394c;
+    color: white;
+}
+
+form input.darker-input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+form input:hover {
+    cursor: text;
+}
+
+form input.standard-input:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+form input.light-input:hover {
+    background-color: #919699;
+}
+
+form input.darker-input:hover {
+    background-color: #013141;
+}
+
+button {
+    border: none;
+    outline: none; 
+    transition: box-shadow 200ms ease, background-color 200ms ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Button themes */
+button.standard-button {
+    background-color: rgb(247, 226, 223);
+    color: rgb(0, 0, 0);
+}
+
+button.standard-button:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+button.light-button {
+    background-color: white;
+    color: #1a150e;
+}
+
+button.light-button:hover {
+    background-color: #f0f0f0;
+}
+
+button.darker-button {
+    background-color: #002837;
+    color: white;
+}
+
+button.darker-button:hover {
+    background-color: #001f29;
+}
+
+form button {
+    background:var(--purple);
+    color:white;
+    border-radius:20px;
+    font-weight:700;
+    padding:18px;
+    transition:.3s;
+    background:var(--lime);
+    color:black;
+    transform:translateY(-4px);
+}
+
+#myUnOrdList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.todo-list {
+    min-width: 25%;
+    overflow: hidden;
+    /* To remove the bullets of unordered list */
+    list-style: none;
+}
+
+.todo {
+    background:white;
+    border-left:8px solid var(--lime);
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+/* Items themes */
+.standard-todo {
+    background-color: rgb(26, 27, 27);
+}
+
+.light-todo {
+    background-color:#AEB1B4;
+}
+
+.darker-todo {
+    background-color: #01394c;
+}
+
+.todo li{
+    padding: 7px;
+    /* word-wrap: break-word; */
+    /* flex-wrap: wrap; */
+    font-size: 20px;
+    flex: 1; /* To push the trash and the check button to the right */
+    border-radius: 30px;
+
+    /* wraps the links */
+    overflow-wrap: anywhere;
+}
+
+.check-btn, .delete-btn {
+    font-size: 19px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 80%;
+    margin: 0 5px;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check { 
+    pointer-events: none;
+}
+
+
+.completed {
+    transition: 0.2s;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transition: 0.5s;
+    transform: translateY(45rem) rotateZ(45deg);
+    opacity: 0;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 1000px) {
+    .flexrow-container {
+        align-self: unset;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #header {
+        font-size: 2rem;
+    }
+
+    #title {
+        animation: 
+            animated-text 3s steps(16,end) 0.5s 1 normal both,
+            animated-cursor 750ms steps(16,end) infinite;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        max-width: 330px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #header {
+        font-size: 1.5rem;
+    }
+
+    #title {
+        animation: 
+            animated-text 3.5s steps(16,end) 0.5s 1 normal both,
+            animated-cursor 750ms steps(16,end) infinite;
+        max-width: 255px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    form {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    form input {
+        border-radius: 17px;
+    }
+
+    form button {
+        border-radius: 15px;
+        margin-top: 15px;
+        width: 50%;
+    }
+    form > button.light-button {
+        box-shadow: 0 0 5px lightgray;
+    }
 }
