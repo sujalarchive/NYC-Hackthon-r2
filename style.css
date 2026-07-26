@@ -1,0 +1,17 @@
+* { margin: 0;
+     padding: 0;
+      box-sizing: border-box;
+     }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: hsl(0, 19%, 58%);
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 0 2rem;
+        padding-top: 2rem;
+        
+        
+        
+    }
